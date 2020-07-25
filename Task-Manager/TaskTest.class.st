@@ -15,6 +15,12 @@ Class {
 	#category : #'Task-Manager'
 }
 
+{ #category : #override }
+TaskTest >> initialize [ 
+	super initialize.
+	self name = 'New Task'.
+]
+
 { #category : #test }
 TaskTest >> testInitialized [ 
 	self assert: isDone not.
