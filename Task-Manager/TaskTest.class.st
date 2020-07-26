@@ -7,7 +7,7 @@ Class {
 	#category : #'Task-Manager'
 }
 
-{ #category : #test }
+{ #category : #tests }
 TaskTest >> testInitialization [
 	| a |
 	a := Task new.
@@ -17,7 +17,7 @@ TaskTest >> testInitialization [
 ]
 
 { #category : #tests }
-TaskTest >> testStatusValue [
+TaskTest >> testStatusValues [
 	| a |.
 	a := Task new.
 	^self assert: (#(New Progress Done) includes: a status).
