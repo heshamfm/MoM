@@ -1,5 +1,5 @@
 Class {
-	#name : #Project,
+	#name : #Goal,
 	#superclass : #Object,
 	#instVars : [
 		'id',
@@ -12,16 +12,16 @@ Class {
 }
 
 { #category : #access }
-Project >> getName [
+Goal >> getName [
 	^ name.
 ]
 
 { #category : #initialize }
-Project >> initialize [ 
+Goal >> initialize [ 
 	self setName: 'New Name Here..'
 ]
 
 { #category : #access }
-Project >> setName: newName [ 
+Goal >> setName: newName [ 
 	name := newName 
 ]
