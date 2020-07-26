@@ -11,15 +11,14 @@ Class {
 TaskTest >> testInitialization [
 	| a |
 	a := Task new.
-	self assert: a class equals: Task.
-	self assert: (a getName) equals: 'Task Name Here..'.
-	^ self
+	self 	assert: (a getName) equals: 'Task Name Here..';
+			assert: a getStatus equals: 'New'.
 ]
 
 { #category : #tests }
 TaskTest >> testStatusValue [
 	| a |.
 	a := Task new.
-	Transcript show: a getStatus .
+
 	^self assert: (#('New' 'Progress' 'Done') includes: a getStatus).
 ]

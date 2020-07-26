@@ -26,11 +26,9 @@ Task >> getStatus [
 ]
 
 { #category : #initialize }
-Task >> new [  
-	super new.
-	self setName: 'Task Name Here..'.
-	self setStatus: 'New'.
-
+Task >> initialize [ 
+	name := 'Task Name Here..'.
+	status := 'New'
 ]
 
 { #category : #accessing }
