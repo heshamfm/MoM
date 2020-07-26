@@ -9,7 +9,8 @@ Class {
 		'code',
 		'name',
 		'dealine',
-		'status'
+		'status',
+		'responsible'
 	],
 	#category : #'Task-Manager'
 }
@@ -18,6 +19,11 @@ Class {
 Task >> getName [
 
 	^ name
+]
+
+{ #category : #accessing }
+Task >> getResponsible [
+	^ responsible
 ]
 
 { #category : #accessing }

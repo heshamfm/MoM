@@ -4,8 +4,16 @@ My purpose is to test the Task class
 Class {
 	#name : #TaskTest,
 	#superclass : #TestCase,
-	#category : #'Task-Manager'
+	#category : #'Task-Manager-Tests'
 }
+
+{ #category : #tests }
+TaskTest >> checkTaskConsistency [
+	| x |
+	x := Task new.
+	(x getStatus ~= 'New') ifTrue:
+		(self assert: x getResponsible notNil).
+]
 
 { #category : #tests }
 TaskTest >> testInitialization [
