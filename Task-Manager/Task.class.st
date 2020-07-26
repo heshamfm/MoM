@@ -31,3 +31,13 @@ Task >> new [
 	self setName: 'Task Name Here..'.
 	^ self 
 ]
+
+{ #category : #accessing }
+Task >> setName: newName [ 
+	name := newName 
+]
+
+{ #category : #accessing }
+Task >> setStatus: newStatus [
+	status := newStatus 
+]
