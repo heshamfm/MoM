@@ -17,5 +17,6 @@ Class {
 { #category : #initialize }
 Task >> new [  
 	super new.
+	name := 'Task Name Here..'.
 	^ self 
 ]

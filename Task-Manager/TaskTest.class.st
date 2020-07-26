@@ -8,6 +8,10 @@ Class {
 }
 
 { #category : #test }
-TaskTest >> testInitialization [ 
-	^ self assert: Task new isInitialized 
+TaskTest >> testInitialization [
+	| a |
+	a := Task new.
+	a assert: a isInitialized.
+	a assert: a name equals: 'Task Name Here..'.
+	^ self
 ]
