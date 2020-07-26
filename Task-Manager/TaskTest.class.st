@@ -15,3 +15,10 @@ TaskTest >> testInitialization [
 	a assert: a name equals: 'Task Name Here..'.
 	^ self
 ]
+
+{ #category : #tests }
+TaskTest >> testStatusValue [
+	| a |.
+	a := Task new.
+	^self assert: (#(New Progress Done) includes: a status).
+]
