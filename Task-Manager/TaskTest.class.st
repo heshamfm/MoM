@@ -7,11 +7,11 @@ Class {
 	#category : #'Task-Manager'
 }
 
-{ #category : #test }
+{ #category : #tests }
 TaskTest >> testInitialization [
 	| a |
 	a := Task new.
-	self assert: a isNil not.
+	self assert: a class equals: Task.
 	self assert: (a getName) equals: 'Task Name Here..'.
 	^ self
 ]
@@ -20,5 +20,6 @@ TaskTest >> testInitialization [
 TaskTest >> testStatusValue [
 	| a |.
 	a := Task new.
-	^self assert: (#(New Progress Done) includes: a getStatus).
+	Transcript show: a getStatus .
+	^self assert: (#('New' 'Progress' 'Done') includes: a getStatus).
 ]

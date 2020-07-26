@@ -29,7 +29,8 @@ Task >> getStatus [
 Task >> new [  
 	super new.
 	self setName: 'Task Name Here..'.
-	^ self 
+	self setStatus: 'New'.
+
 ]
 
 { #category : #accessing }
