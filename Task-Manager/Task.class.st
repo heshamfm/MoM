@@ -14,9 +14,20 @@ Class {
 	#category : #'Task-Manager'
 }
 
+{ #category : #accessing }
+Task >> getName [
+
+	^ name
+]
+
+{ #category : #accessing }
+Task >> getStatus [
+	^ status.
+]
+
 { #category : #initialize }
 Task >> new [  
 	super new.
-	name := 'Task Name Here..'.
+	self setName: 'Task Name Here..'.
 	^ self 
 ]

@@ -3,22 +3,22 @@ My purpose is to test the Task class
 "
 Class {
 	#name : #TaskTest,
-	#superclass : #Object,
+	#superclass : #TestCase,
 	#category : #'Task-Manager'
 }
 
-{ #category : #tests }
+{ #category : #test }
 TaskTest >> testInitialization [
 	| a |
 	a := Task new.
-	a assert: a isInitialized.
-	a assert: a name equals: 'Task Name Here..'.
+	self assert: a isNil not.
+	self assert: (a getName) equals: 'Task Name Here..'.
 	^ self
 ]
 
 { #category : #tests }
-TaskTest >> testStatusValues [
+TaskTest >> testStatusValue [
 	| a |.
 	a := Task new.
-	^self assert: (#(New Progress Done) includes: a status).
+	^self assert: (#(New Progress Done) includes: a getStatus).
 ]
