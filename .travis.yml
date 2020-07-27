@@ -38,3 +38,6 @@ smalltalk:
 #cache:
 #  directories:
 #    - $SMALLTALK_CI_CACHE
+
+env:
+- SMALLTALK_CI_TIMEOUT=30
