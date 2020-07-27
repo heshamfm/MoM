@@ -9,9 +9,15 @@ BaselineOfTaskManager >> baseline: spec [
 	<baseline>
 	spec 
 		for: #common 
-		do: [		
-			spec package: 'TaskManager'.
+		do: [
+			"Packages"
 			spec
-				package: 'TaskManager-Tests'
-				with: [ spec requires: #( 'TaskManager') ] ] 
+				package: 'TaskManager';
+				package: 'TaskManager-Tests' with: [ spec requires: #('TaskManager') ]]
+]
+
+{ #category : #baselines }
+BaselineOfTaskManager >> projectClass [
+	^ MetacelloCypressBaselineProject
+	
 ]
