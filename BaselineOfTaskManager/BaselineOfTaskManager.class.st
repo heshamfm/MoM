@@ -1,5 +1,5 @@
 Class {
 	#name : #BaselineOfTaskManager,
-	#superclass : #Object,
+	#superclass : #BaselineOf,
 	#category : #BaselineOfTaskManager
 }
