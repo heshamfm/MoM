@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #baselines }
-BaselineOfTaskManager class >> baseline: spec [
+BaselineOfTaskManager >> baseline: spec [
 	<baseline>
 	spec 
 		for: #common 
