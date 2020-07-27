@@ -11,8 +11,9 @@ Class {
 TaskTest >> checkTaskConsistency [
 	| x |
 	x := Task new.
-	(x getStatus ~= 'New') ifTrue:
-		(self assert: x getResponsible notNil).
+	x getStatus ~= 'New'
+		ifTrue: [ self assert: x getResponsible notNil ].
+	x getResponsible ifNil: [ self assert: x getStatus equals: 'New' ]
 ]
 
 { #category : #tests }
