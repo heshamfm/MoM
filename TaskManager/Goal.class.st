@@ -15,41 +15,41 @@ Class {
 	#category : #TaskManager
 }
 
+{ #category : #initialize }
+Goal >> initialize [ 
+	self 
+		name: 'New Name Here..';
+		status: 'New'.
+]
+
 { #category : #accessing }
-Goal >> getManager [
+Goal >> manager [
 	^ manager 
 ]
 
 { #category : #accessing }
-Goal >> getName [
-	^ name.
-]
-
-{ #category : #accessing }
-Goal >> getStatus [
-	^ status.
-]
-
-{ #category : #initialize }
-Goal >> initialize [ 
-	self 
-		setName: 'New Name Here..';
-		setStatus: 'New'.
-]
-
-{ #category : #accessing }
-Goal >> setManager: newManager [
+Goal >> manager: newManager [
 	manager := newManager
 ]
 
 { #category : #accessing }
-Goal >> setName: newName [ 
+Goal >> name [
+	^ name.
+]
+
+{ #category : #accessing }
+Goal >> name: newName [ 
 	name := newName 
 ]
 
 { #category : #accessing }
-Goal >> setStatus: newStstus [
-	self getManager
+Goal >> status [
+	^ status.
+]
+
+{ #category : #accessing }
+Goal >> status: newStstus [
+	self manager
 		ifNil: [ status := 'New' ];
 		ifNotNil: [ status := newStstus ]
 		

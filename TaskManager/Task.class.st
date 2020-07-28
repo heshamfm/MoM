@@ -15,22 +15,6 @@ Class {
 	#category : #TaskManager
 }
 
-{ #category : #accessing }
-Task >> getName [
-
-	^ name
-]
-
-{ #category : #accessing }
-Task >> getResponsible [
-	^ responsible
-]
-
-{ #category : #accessing }
-Task >> getStatus [
-	^ status.
-]
-
 { #category : #initialize }
 Task >> initialize [ 
 	name := 'Task Name Here..'.
@@ -38,11 +22,27 @@ Task >> initialize [
 ]
 
 { #category : #accessing }
-Task >> setName: newName [ 
+Task >> name [
+
+	^ name
+]
+
+{ #category : #accessing }
+Task >> name: newName [ 
 	name := newName 
 ]
 
 { #category : #accessing }
-Task >> setStatus: newStatus [
+Task >> responsible [
+	^ responsible
+]
+
+{ #category : #accessing }
+Task >> status [
+	^ status.
+]
+
+{ #category : #accessing }
+Task >> status: newStatus [
 	status := newStatus 
 ]

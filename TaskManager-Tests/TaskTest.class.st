@@ -11,23 +11,23 @@ Class {
 TaskTest >> checkTaskConsistency [
 	| x |
 	x := Task new.
-	x getStatus ~= 'New'
-		ifTrue: [ self assert: x getResponsible notNil ].
-	x getResponsible ifNil: [ self assert: x getStatus equals: 'New' ]
+	x status ~= 'New'
+		ifTrue: [ self assert: x responsible notNil ].
+	x responsible ifNil: [ self assert: x status equals: 'New' ]
 ]
 
 { #category : #tests }
 TaskTest >> testInitialization [
 	| a |
 	a := Task new.
-	self 	assert: (a getName) equals: 'Task Name Here..';
-			assert: a getStatus equals: 'New'.
+	self 	assert: (a name) equals: 'Task Name Here..';
+			assert: a status equals: 'New'.
 ]
 
 { #category : #tests }
 TaskTest >> testStatusValue [
-	| a |.
-	a := Task new.
+	| t |.
+	t := Task new.
 
-	^self assert: (#('New' 'Progress' 'Done') includes: a getStatus).
+	^self assert: (#('New' 'Progress' 'Done') includes: t status).
 ]
