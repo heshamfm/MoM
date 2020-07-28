@@ -5,6 +5,7 @@ sudo: false
 os:
   - linux
   - osx
+  - windows
 
 # Select compatible Smalltalk image(s)
 smalltalk:
@@ -16,9 +17,9 @@ smalltalk:
 
 #  - Pharo-alpha
 #  - Pharo-stable
-  - Pharo32-8.0
-  - Pharo-7.0
-  - Pharo-6.1
+#  - Pharo32-8.0
+#  - Pharo-7.0
+#  - Pharo-6.1
 #  - Pharo-5.0
 #  - Pharo-4.0
 #  - Pharo-3.0
@@ -27,8 +28,8 @@ smalltalk:
 #  - Pharo64-stable
   - Pharo64-9.0
   - Pharo64-8.0
-  - Pharo64-7.0
-  - Pharo64-6.1
+#  - Pharo64-7.0
+#  - Pharo64-6.1
 
 #  - GemStone-3.3.0
 #  - GemStone-3.2.12
@@ -38,3 +39,6 @@ smalltalk:
 #cache:
 #  directories:
 #    - $SMALLTALK_CI_CACHE
+
+env:
+- SMALLTALK_CI_TIMEOUT=30
