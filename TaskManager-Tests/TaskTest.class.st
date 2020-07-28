@@ -20,8 +20,9 @@ TaskTest >> checkTaskConsistency [
 TaskTest >> testInitialization [
 	| a |
 	a := Task new.
-	self 	assert: (a name) equals: 'Task Name Here..';
-			assert: a status equals: 'New'.
+	self
+		assert: a name equals: 'Task Name Here..';
+		assert: a status equals: 'New'.
 ]
 
 { #category : #tests }
