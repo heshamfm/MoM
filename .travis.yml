@@ -5,7 +5,7 @@ sudo: false
 os:
   - linux
   - osx
-  - windows
+#  - windows
 
 # Select compatible Smalltalk image(s)
 smalltalk:

@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.com/heshamfm/RnD.svg?branch=master)](https://travis-ci.org/github/heshamfm/RnD)
+<br />
+
 # Respository for learning Pharo
 
 Travis url: https://travis-ci.com/github/heshamfm/RnD/builds/177362928
