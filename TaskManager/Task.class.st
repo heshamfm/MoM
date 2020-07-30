@@ -18,7 +18,7 @@ Class {
 { #category : #initialize }
 Task >> initialize [ 
 	name := 'Task Name Here..'.
-	status := 'New'
+	status := #NEW
 ]
 
 { #category : #accessing }

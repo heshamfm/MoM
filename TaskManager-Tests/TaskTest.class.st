@@ -8,21 +8,13 @@ Class {
 }
 
 { #category : #tests }
-TaskTest >> checkTaskConsistency [
-	| x |
-	x := Task new.
-	x status ~= 'New'
-		ifTrue: [ self assert: x responsible notNil ].
-	x responsible ifNil: [ self assert: x status equals: 'New' ]
-]
-
-{ #category : #tests }
 TaskTest >> testInitialization [
-	| a |
-	a := Task new.
+	| t |
+	t := Task new.
 	self
-		assert: a name equals: 'Task Name Here..';
-		assert: a status equals: 'New'.
+		assert: t name equals: 'Task Name Here..';
+		assert: t status equals: #NEW;
+		assert: t status notNil .
 ]
 
 { #category : #tests }
@@ -30,5 +22,5 @@ TaskTest >> testStatusValue [
 	| t |.
 	t := Task new.
 
-	^self assert: (#('New' 'Progress' 'Done') includes: t status).
+	^self assert: ( Status statuses includes: t status).
 ]

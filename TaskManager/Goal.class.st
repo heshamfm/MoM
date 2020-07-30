@@ -15,11 +15,17 @@ Class {
 	#category : #TaskManager
 }
 
+{ #category : #accessing }
+Goal >> consistent [
+	(self status = #NEW)
+		ifFalse: [ ^ (manager notNil) ];
+		ifTrue: [ ^ true ].
+]
+
 { #category : #initialize }
 Goal >> initialize [ 
-	self 
-		name: 'New Name Here..';
-		status: 'New'.
+	self name: 'New Name Here..'.
+	self status: #NEW.
 ]
 
 { #category : #accessing }
@@ -50,7 +56,7 @@ Goal >> status [
 { #category : #accessing }
 Goal >> status: newStstus [
 	self manager
-		ifNil: [ status := 'New' ];
+		ifNil: [ status := #NEW ];
 		ifNotNil: [ status := newStstus ]
 		
 ]
