@@ -13,7 +13,7 @@ TaskTest >> testInitialization [
 	t := Task new.
 	self
 		assert: t name equals: 'Task Name Here..';
-		assert: t status equals: #NEW;
+		assert: t status equals: Status NEW;
 		assert: t status notNil .
 ]
 

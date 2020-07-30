@@ -25,7 +25,7 @@ Goal >> consistent [
 { #category : #initialize }
 Goal >> initialize [ 
 	self name: 'New Name Here..'.
-	self status: #NEW.
+	self status: Status NEW.
 ]
 
 { #category : #accessing }
@@ -56,7 +56,7 @@ Goal >> status [
 { #category : #accessing }
 Goal >> status: newStstus [
 	self manager
-		ifNil: [ status := #NEW ];
+		ifNil: [ status := Status NEW ];
 		ifNotNil: [ status := newStstus ]
 		
 ]
