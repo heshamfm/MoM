@@ -3,7 +3,7 @@ I represent status of Task or Goal
 "
 Class {
 	#name : #Status,
-	#superclass : #SharedPool,
+	#superclass : #Object,
 	#category : #TaskManager
 }
 
