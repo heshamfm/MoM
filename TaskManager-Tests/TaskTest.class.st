@@ -18,6 +18,11 @@ TaskTest >> testInitialization [
 ]
 
 { #category : #tests }
+TaskTest >> testMoMId [
+	self assert: (MoM new) id notNil .
+]
+
+{ #category : #tests }
 TaskTest >> testStatusValue [
 	| t |.
 	t := Task new.

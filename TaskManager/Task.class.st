@@ -15,8 +15,15 @@ Class {
 	#category : #TaskManager
 }
 
+{ #category : #accessing }
+Task >> id [
+	^ id
+]
+
 { #category : #initialize }
 Task >> initialize [ 
+
+	id := IDGenerator generateId.
 	name := 'Task Name Here..'.
 	status := #NEW
 ]

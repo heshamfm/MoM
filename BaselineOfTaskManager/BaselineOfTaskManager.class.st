@@ -13,7 +13,13 @@ BaselineOfTaskManager >> baseline: spec [
 			"Packages"
 			spec
 				package: 'TaskManager';
-				package: 'TaskManager-Tests' with: [ spec requires: #('TaskManager') ]]
+				package: 'TaskManager-Tests' with: [ spec requires: #('TaskManager') ].
+				
+			spec
+				baseline: 'Garage'
+					with: [ spec
+					loads: 'postgresV2';
+					repository: 'github://pharo-rdbms/garage' ]]
 ]
 
 { #category : #baselines }

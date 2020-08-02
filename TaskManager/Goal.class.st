@@ -22,8 +22,14 @@ Goal >> consistent [
 		ifTrue: [ ^ true ].
 ]
 
+{ #category : #accessing }
+Goal >> id [
+	^ id
+]
+
 { #category : #initialize }
 Goal >> initialize [ 
+	id := IDGenerator generateId.
 	self name: 'New Name Here..'.
 	self status: Status NEW.
 ]
