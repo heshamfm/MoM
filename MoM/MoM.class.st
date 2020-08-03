@@ -10,23 +10,10 @@ Class {
 		'name',
 		'manager',
 		'status',
-		'tasks'
-	],
-	#classInstVars : [
 		'actions'
 	],
 	#category : #MoM
 }
-
-{ #category : #accessing }
-MoM class >> actions [
-	^ actions ifNil: [ actions := Set new ]
-]
-
-{ #category : #adding }
-MoM class >> addAction: anAction [
-	self actions add: anAction
-]
 
 { #category : #testing }
 MoM class >> isVoyageRoot [ 
@@ -40,6 +27,16 @@ MoM class >> setUpConnection [
 			host: 'localhost:27017'
 			database: 'mom'.
 		repository  enableSingleton .
+]
+
+{ #category : #accessing }
+MoM >> actions [
+	^ actions ifNil: [ actions := Set new ]
+]
+
+{ #category : #adding }
+MoM >> addAction: anAction [
+	self actions add: anAction
 ]
 
 { #category : #accessing }
