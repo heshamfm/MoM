@@ -5,7 +5,6 @@ Class {
 	#name : #Action,
 	#superclass : #Object,
 	#instVars : [
-		'id',
 		'code',
 		'name',
 		'dealine',
@@ -18,11 +17,6 @@ Class {
 { #category : #testing }
 Action class >> isVoyageRoot [ 
 	^ true
-]
-
-{ #category : #accessing }
-Action >> id [
-	^ id
 ]
 
 { #category : #initialize }

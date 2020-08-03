@@ -5,7 +5,6 @@ Class {
 	#name : #MoM,
 	#superclass : #Object,
 	#instVars : [
-		'id',
 		'code',
 		'name',
 		'manager',
@@ -25,7 +24,7 @@ MoM class >> setUpConnection [
 	| repository |
 	repository  := VOMongoRepository 
 			host: 'localhost:27017'
-			database: 'mom'.
+			database: 'minutes'.
 		repository  enableSingleton .
 ]
 
@@ -44,11 +43,6 @@ MoM >> consistent [
 	(self status = #NEW)
 		ifFalse: [ ^ (manager notNil) ];
 		ifTrue: [ ^ true ].
-]
-
-{ #category : #accessing }
-MoM >> id [
-	^ id
 ]
 
 { #category : #initialize }
