@@ -1,1 +1,1 @@
-Package { #name : #BaselineOfMoM }
+Package { #name : #BaselineOfTaskManager }
