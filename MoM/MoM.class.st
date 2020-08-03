@@ -29,7 +29,7 @@ MoM >> id [
 
 { #category : #initialize }
 MoM >> initialize [ 
-	id := IDGenerator generateId.
+
 	self name: 'New Name Here..'.
 	self status: Status NEW.
 ]

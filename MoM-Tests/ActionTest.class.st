@@ -19,7 +19,7 @@ ActionTest >> testInitialization [
 
 { #category : #tests }
 ActionTest >> testMoMId [
-	self assert: (MoM new) id notNil .
+	
 ]
 
 { #category : #tests }

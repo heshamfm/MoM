@@ -23,7 +23,6 @@ Task >> id [
 { #category : #initialize }
 Task >> initialize [ 
 
-	id := IDGenerator generateId.
 	name := 'Task Name Here..'.
 	status := #NEW
 ]
