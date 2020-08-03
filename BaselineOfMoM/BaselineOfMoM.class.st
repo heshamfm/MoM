@@ -1,23 +1,24 @@
 Class {
-	#name : #BaselineOfTaskManager,
+	#name : #BaselineOfMoM,
 	#superclass : #BaselineOf,
 	#category : #BaselineOfMoM
 }
 
 { #category : #baselines }
-BaselineOfTaskManager >> baseline: spec [
+BaselineOfMoM >> baseline: spec [
 	<baseline>
 	spec 
 		for: #common 
 		do: [
 			"Packages"
 			spec
-				package: 'TaskManager';
-				package: 'TaskManager-Tests' with: [ spec requires: #('TaskManager') ]]
+				package: 'MoM';
+				package: 'MoM-Tests' with: [ spec requires: #('MoM') ]]
+			
 ]
 
 { #category : #baselines }
-BaselineOfTaskManager >> projectClass [
+BaselineOfMoM >> projectClass [
 	^ MetacelloCypressBaselineProject
 	
 ]
