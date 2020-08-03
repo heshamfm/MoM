@@ -12,8 +12,35 @@ Class {
 		'status',
 		'tasks'
 	],
+	#classInstVars : [
+		'actions'
+	],
 	#category : #MoM
 }
+
+{ #category : #accessing }
+MoM class >> actions [
+	^ actions ifNil: [ actions := Set new ]
+]
+
+{ #category : #adding }
+MoM class >> addAction: anAction [
+	self actions add: anAction
+]
+
+{ #category : #testing }
+MoM class >> isVoyageRoot [ 
+	^ true
+]
+
+{ #category : #initialization }
+MoM class >> setUpConnection [
+	| repository |
+	repository  := VOMongoRepository 
+			host: 'localhost:27017'
+			database: 'mom'.
+		repository  enableSingleton .
+]
 
 { #category : #accessing }
 MoM >> consistent [

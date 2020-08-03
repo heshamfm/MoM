@@ -2,7 +2,7 @@
 I represent a task that has an automatically generated id, a name and an optional code. I also have a deadline and a status
 "
 Class {
-	#name : #Task,
+	#name : #Action,
 	#superclass : #Object,
 	#instVars : [
 		'id',
@@ -15,40 +15,45 @@ Class {
 	#category : #MoM
 }
 
+{ #category : #testing }
+Action class >> isVoyageRoot [ 
+	^ true
+]
+
 { #category : #accessing }
-Task >> id [
+Action >> id [
 	^ id
 ]
 
 { #category : #initialize }
-Task >> initialize [ 
+Action >> initialize [ 
 
-	name := 'Task Name Here..'.
+	name := 'Action Name Here..'.
 	status := #NEW
 ]
 
 { #category : #accessing }
-Task >> name [
+Action >> name [
 
 	^ name
 ]
 
 { #category : #accessing }
-Task >> name: newName [ 
+Action >> name: newName [ 
 	name := newName 
 ]
 
 { #category : #accessing }
-Task >> responsible [
+Action >> responsible [
 	^ responsible
 ]
 
 { #category : #accessing }
-Task >> status [
+Action >> status [
 	^ status.
 ]
 
 { #category : #accessing }
-Task >> status: newStatus [
+Action >> status: newStatus [
 	status := newStatus 
 ]
