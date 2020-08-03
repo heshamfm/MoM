@@ -2,13 +2,13 @@
 My purpose is to test the Task class 
 "
 Class {
-	#name : #TaskTest,
+	#name : #ActionTest,
 	#superclass : #TestCase,
 	#category : #'MoM-Tests'
 }
 
 { #category : #tests }
-TaskTest >> testInitialization [
+ActionTest >> testInitialization [
 	| t |
 	t := Task new.
 	self
@@ -18,12 +18,12 @@ TaskTest >> testInitialization [
 ]
 
 { #category : #tests }
-TaskTest >> testMoMId [
+ActionTest >> testMoMId [
 	self assert: (MoM new) id notNil .
 ]
 
 { #category : #tests }
-TaskTest >> testStatusValue [
+ActionTest >> testStatusValue [
 	| t |.
 	t := Task new.
 
