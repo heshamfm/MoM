@@ -1,29 +1,22 @@
 Class {
-	#name : #BaselineOfTaskManager,
+	#name : #BaselineOfMoM,
 	#superclass : #BaselineOf,
-	#category : #BaselineOfTaskManager
+	#category : #BaselineOfMoM
 }
 
 { #category : #baselines }
-BaselineOfTaskManager >> baseline: spec [
+BaselineOfMoM >> baseline: spec [
 	<baseline>
 	spec 
 		for: #common 
 		do: [
 			"Packages"
 			spec
-				package: 'TaskManager';
-				package: 'TaskManager-Tests' with: [ spec requires: #('TaskManager') ].
-				
-			spec
-				baseline: 'Garage'
-					with: [ spec
-					loads: 'postgresV2';
-					repository: 'github://pharo-rdbms/garage' ]]
-]
+				package: 'MoM';
+				package: 'MoM-Tests' with: [ spec requires: #('MoM') ]]]
 
 { #category : #baselines }
-BaselineOfTaskManager >> projectClass [
+BaselineOfMoM >> projectClass [
 	^ MetacelloCypressBaselineProject
 	
 ]
