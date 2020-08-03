@@ -6,19 +6,19 @@ Class {
 
 { #category : #tests }
 MoMTest >> testInit [ 
-	self assert: ((Goal new) name) equals: 'New Name Here..'.
-	self assert: Goal new status notNil 
+	self assert: ((MoM new) name) equals: 'New Name Here..'.
+	self assert: MoM new status notNil 
 ]
 
 { #category : #tests }
 MoMTest >> testMoMStatusConsistency [
 
-	self assert: Goal new consistent
+	self assert: MoM new consistent
 ]
 
 { #category : #tests }
 MoMTest >> testMoMStatusValues [
 	| g |
-	g := Goal new.
+	g := MoM new.
 	self assert: (Status statuses includes: g status).
 ]
