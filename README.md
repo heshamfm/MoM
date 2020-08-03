@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.com/heshamfm/MoM.svg?branch=master)](https://travis-ci.org/github/heshamfm/MoM)
 <br />
 
-# Respository to create a note taking app, especially designed for executive meetings and board room meetings. 
+# Repository to create a note taking app, especially designed for executive meetings and board room meetings. This is WIP.
 
 Travis url: Will be addedd 
 
