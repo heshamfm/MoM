@@ -2,27 +2,27 @@
 I represent status of Task or Goal
 "
 Class {
-	#name : #Status,
+	#name : #MoMStatus,
 	#superclass : #Object,
 	#category : #MoM
 }
 
 { #category : #'as yet unclassified' }
-Status class >> DONE [
+MoMStatus class >> DONE [
 	^ #DONE
 ]
 
 { #category : #accessing }
-Status class >> NEW [
+MoMStatus class >> NEW [
 	^ #NEW.
 ]
 
 { #category : #'as yet unclassified' }
-Status class >> PROGRESS [ 
+MoMStatus class >> PROGRESS [ 
 	^ #PROGRESS
 ]
 
 { #category : #accessing }
-Status class >> statuses [
+MoMStatus class >> statuses [
 	^ #(NEW PROGRESS DONE)
 ]

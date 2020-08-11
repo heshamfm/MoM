@@ -22,8 +22,8 @@ MoM class >> isVoyageRoot [
 { #category : #playing }
 MoM class >> justATest [
 	| study enjoy |
-	study := Action selectOne: [ :each | each name = 'Study']. 
-	enjoy := Action selectOne: [ :each | each name = 'Enjoy'].
+	study := MoMAction selectOne: [ :each | each name = 'Study']. 
+	enjoy := MoMAction selectOne: [ :each | each name = 'Enjoy'].
 	self new
 		name: 'HANAN';
 		addAction: study; 
@@ -35,33 +35,33 @@ MoM class >> justATest [
 MoM class >> populateTestData [
 	self new
 	   name: 'HANAN';
-	   addAction: (Action new name: 'Cook');
-	   addAction: (Action new name: 'Pet');
-	   addAction: (Action new name: 'Love');
+	   addAction: (MoMAction new name: 'Cook');
+	   addAction: (MoMAction new name: 'Pet');
+	   addAction: (MoMAction new name: 'Love');
 	   save.
 
 	self new
 	   name: 'MARIAM';
-	   addAction: (Action new name: 'Draw');
-	   addAction: (Action new name: 'Dance');
+	   addAction: (MoMAction new name: 'Draw');
+	   addAction: (MoMAction new name: 'Dance');
 	   save.
 
 	self new
 	   name: 'MOHAMMAD';
-	   addAction: (Action new name: 'Code');
-	   addAction: (Action new name: 'Play');
+	   addAction: (MoMAction new name: 'Code');
+	   addAction: (MoMAction new name: 'Play');
 	   save.
 
 	self new
 	   name: 'NADIN';
-	   addAction: (Action new name: 'Study');
-	   addAction: (Action new name: 'Pray');
+	   addAction: (MoMAction new name: 'Study');
+	   addAction: (MoMAction new name: 'Pray');
 	   save.
 
 	self new
 	   name: 'NOUREN';
-	   addAction: (Action new name: 'Code');
-	   addAction: (Action new name: 'Play');
+	   addAction: (MoMAction new name: 'Code');
+	   addAction: (MoMAction new name: 'Play');
 	   save.
 ]
 
@@ -95,7 +95,7 @@ MoM >> consistent [
 MoM >> initialize [ 
 
 	self name: 'New Name Here..'.
-	self status: Status NEW.
+	self status: MoMStatus NEW.
 ]
 
 { #category : #accessing }
@@ -126,7 +126,7 @@ MoM >> status [
 { #category : #accessing }
 MoM >> status: newStstus [
 	self manager
-		ifNil: [ status := Status NEW ];
+		ifNil: [ status := MoMStatus NEW ];
 		ifNotNil: [ status := newStstus ]
 		
 ]

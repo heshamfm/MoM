@@ -2,30 +2,30 @@
 My purpose is to test the Task class 
 "
 Class {
-	#name : #ActionTest,
+	#name : #MoMActionTest,
 	#superclass : #TestCase,
 	#category : #'MoM-Tests'
 }
 
 { #category : #tests }
-ActionTest >> testInitialization [
+MoMActionTest >> testInitialization [
 	| t |
-	t := Action new.
+	t := MoMAction new.
 	self
 		assert: t name equals: 'Action Name Here..';
-		assert: t status equals: Status NEW;
+		assert: t status equals: MoMStatus NEW;
 		assert: t status notNil .
 ]
 
 { #category : #tests }
-ActionTest >> testMoMId [
+MoMActionTest >> testMoMId [
 	
 ]
 
 { #category : #tests }
-ActionTest >> testStatusValue [
+MoMActionTest >> testStatusValue [
 	| t |.
-	t := Action new.
+	t := MoMAction new.
 
-	^self assert: ( Status statuses includes: t status).
+	^self assert: ( MoMStatus statuses includes: t status).
 ]
