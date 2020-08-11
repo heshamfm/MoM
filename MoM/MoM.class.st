@@ -19,6 +19,52 @@ MoM class >> isVoyageRoot [
 	^ true
 ]
 
+{ #category : #playing }
+MoM class >> justATest [
+	| study enjoy |
+	study := Action selectOne: [ :each | each name = 'Study']. 
+	enjoy := Action selectOne: [ :each | each name = 'Enjoy'].
+	self new
+		name: 'HANAN';
+		addAction: study; 
+		addAction: enjoy; 
+		save.
+]
+
+{ #category : #'as yet unclassified' }
+MoM class >> populateTestData [
+	self new
+	   name: 'HANAN';
+	   addAction: (Action new name: 'Cook');
+	   addAction: (Action new name: 'Pet');
+	   addAction: (Action new name: 'Love');
+	   save.
+
+	self new
+	   name: 'MARIAM';
+	   addAction: (Action new name: 'Draw');
+	   addAction: (Action new name: 'Dance');
+	   save.
+
+	self new
+	   name: 'MOHAMMAD';
+	   addAction: (Action new name: 'Code');
+	   addAction: (Action new name: 'Play');
+	   save.
+
+	self new
+	   name: 'NADIN';
+	   addAction: (Action new name: 'Study');
+	   addAction: (Action new name: 'Pray');
+	   save.
+
+	self new
+	   name: 'NOUREN';
+	   addAction: (Action new name: 'Code');
+	   addAction: (Action new name: 'Play');
+	   save.
+]
+
 { #category : #initialization }
 MoM class >> setUpConnection [
 	| repository |
