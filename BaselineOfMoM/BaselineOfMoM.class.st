@@ -17,10 +17,7 @@ BaselineOfMoM >> baseline: spec [
 
 			spec
 				package: 'MoM';
-				package: 'MoM-Tests' with: [ spec requires: #('MoM') ]]
-			
-			
-			
+				package: 'MoM-Tests' with: [ spec requires: #('MoM') ] ]
 ]
 
 { #category : #baselines }

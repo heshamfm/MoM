@@ -100,7 +100,7 @@ MoM >> initialize [
 
 { #category : #accessing }
 MoM >> manager [
-	^ manager 
+	^ manager.
 ]
 
 { #category : #accessing }
