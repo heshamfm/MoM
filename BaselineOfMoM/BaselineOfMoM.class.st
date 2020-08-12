@@ -12,8 +12,14 @@ BaselineOfMoM >> baseline: spec [
 		do: [
 			"Packages"
 			spec
+            baseline: 'Voyage' 
+            with: [ spec repository: 'github://pharo-nosql/voyage/mc' ].
+
+			spec
 				package: 'MoM';
 				package: 'MoM-Tests' with: [ spec requires: #('MoM') ]]
+			
+			
 			
 ]
 

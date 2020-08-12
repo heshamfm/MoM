@@ -10,14 +10,8 @@ Class {
 	#category : #'MoM-Tests'
 }
 
-{ #category : #'initialize - event' }
-MoMTest class >> initialize [ 
-	"super initialize."
-	self setUp 
-]
-
 { #category : #initialization }
-MoMTest class >> setUp [ 
+MoMTest >> setUp [ 
 	testInstance ifNil: [ testInstance := MoM new ].
 	
 	Transcript show: 'setUp ===================='
