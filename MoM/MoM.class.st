@@ -14,6 +14,14 @@ Class {
 	#category : #MoM
 }
 
+{ #category : #'class initialization' }
+MoM class >> initialize [ 
+
+	TinyLogger default 
+	    ensureFileLoggerNamed: 'D:\Progress.log'; "Add the file logger only if not already"
+	    clearLog "This will delete the previous 'Progress.log' file".
+]
+
 { #category : #testing }
 MoM class >> isVoyageRoot [ 
 	^ true
@@ -95,12 +103,12 @@ MoM >> consistent [
 MoM >> initialize [ 
 
 	self name: 'New Name Here..'.
-	self status: MoMStatus NEW.
+	self status: MoMStatus new.
 ]
 
 { #category : #accessing }
 MoM >> manager [
-	^ manager 
+	^ manager.
 ]
 
 { #category : #accessing }

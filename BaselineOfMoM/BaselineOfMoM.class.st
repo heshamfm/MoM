@@ -14,13 +14,14 @@ BaselineOfMoM >> baseline: spec [
 			spec
             baseline: 'Voyage' 
             with: [ spec repository: 'github://pharo-nosql/voyage/mc' ].
-
+			
+			spec
+				baseline: 'TinyLogger'
+				with: [ spec repository: 'github://jecisc/TinyLogger:v1.x.x/src' ].
+			
 			spec
 				package: 'MoM';
-				package: 'MoM-Tests' with: [ spec requires: #('MoM') ]]
-			
-			
-			
+				package: 'MoM-Tests' with: [ spec requires: #('MoM') ] ]
 ]
 
 { #category : #baselines }

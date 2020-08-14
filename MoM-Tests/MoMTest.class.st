@@ -12,9 +12,9 @@ Class {
 
 { #category : #initialization }
 MoMTest >> setUp [ 
-	testInstance ifNil: [ testInstance := MoM new ].
-	
-	Transcript show: 'setUp ===================='
+	testInstance := MoM new.
+	Transcript show: '===========================.'.
+	"testInstance ifNil: [ testInstance := MoM new ]."
 ]
 
 { #category : #tests }
@@ -27,7 +27,8 @@ MoMTest >> testInit [
 MoMTest >> testManager [
 
 	"self flag: #toImplement."
-	testInstance manager class assert: ByteString
+	Transcript show: ((testInstance manager) class).
+	"(testInstance manager class) assert: ByteString"
 ]
 
 { #category : #tests }
