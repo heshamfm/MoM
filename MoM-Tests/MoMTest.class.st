@@ -13,8 +13,7 @@ Class {
 { #category : #initialization }
 MoMTest >> setUp [ 
 	testInstance := MoM new.
-	Transcript show: '===========================.'.
-	"testInstance ifNil: [ testInstance := MoM new ]."
+	testInstance ifNil: [ testInstance := MoM new ].
 ]
 
 { #category : #tests }

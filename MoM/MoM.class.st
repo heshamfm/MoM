@@ -78,7 +78,7 @@ MoM class >> setUpConnection [
 	| repository |
 	repository  := VOMongoRepository 
 			host: 'localhost:27017'
-			database: 'minutesDB'.
+			database: 'test3'.
 		repository  enableSingleton .
 ]
 
