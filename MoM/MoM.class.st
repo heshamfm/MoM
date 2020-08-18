@@ -75,11 +75,17 @@ MoM class >> populateTestData [
 
 { #category : #initialization }
 MoM class >> setUpConnection [
+	"| repository |
+    repository  := VOMongoRepository 
+            host: 'localhost:27017'
+            database: 'test4'
+            username: 'admin'
+            password: 'admin'.
+        repository  enableSingleton ."
+
 	| repository |
-	repository  := VOMongoRepository 
-			host: 'localhost:27017'
-			database: 'test3'.
-		repository  enableSingleton .
+        repository := VOMemoryRepository new.
+        repository enableSingleton.
 ]
 
 { #category : #accessing }
