@@ -16,7 +16,7 @@ Class {
 
 { #category : #testing }
 MoMAction class >> isVoyageRoot [ 
-	^ true
+	^ false
 ]
 
 { #category : #initialize }
