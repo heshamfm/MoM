@@ -6,7 +6,7 @@ Class {
 	#superclass : #Object,
 	#instVars : [
 		'code',
-		'name',
+		'oname',
 		'manager',
 		'status',
 		'actions'
@@ -14,78 +14,17 @@ Class {
 	#category : #MoM
 }
 
-{ #category : #'class initialization' }
-MoM class >> initialize [ 
-
-	TinyLogger default 
-	    ensureFileLoggerNamed: 'D:\Progress.log'; "Add the file logger only if not already"
-	    clearLog "This will delete the previous 'Progress.log' file".
+{ #category : #voyage }
+MoM class >> descriptionContainer [
+	<voyageContainer>
+	^ VOContainer new
+		collectionName: 'MoM'
+		yourself
 ]
 
 { #category : #testing }
 MoM class >> isVoyageRoot [ 
 	^ true
-]
-
-{ #category : #playing }
-MoM class >> justATest [
-	| study enjoy |
-	study := MoMAction selectOne: [ :each | each name = 'Study']. 
-	enjoy := MoMAction selectOne: [ :each | each name = 'Enjoy'].
-	self new
-		name: 'HANAN';
-		addAction: study; 
-		addAction: enjoy; 
-		save.
-]
-
-{ #category : #'as yet unclassified' }
-MoM class >> populateTestData [
-	self new
-	   name: 'HANAN';
-	   addAction: (MoMAction new name: 'Cook');
-	   addAction: (MoMAction new name: 'Pet');
-	   addAction: (MoMAction new name: 'Love');
-	   save.
-
-	self new
-	   name: 'MARIAM';
-	   addAction: (MoMAction new name: 'Draw');
-	   addAction: (MoMAction new name: 'Dance');
-	   save.
-
-	self new
-	   name: 'MOHAMMAD';
-	   addAction: (MoMAction new name: 'Code');
-	   addAction: (MoMAction new name: 'Play');
-	   save.
-
-	self new
-	   name: 'NADIN';
-	   addAction: (MoMAction new name: 'Study');
-	   addAction: (MoMAction new name: 'Pray');
-	   save.
-
-	self new
-	   name: 'NOUREN';
-	   addAction: (MoMAction new name: 'Code');
-	   addAction: (MoMAction new name: 'Play');
-	   save.
-]
-
-{ #category : #initialization }
-MoM class >> setUpConnection [
-	"| repository |
-    repository  := VOMongoRepository 
-            host: 'localhost:27017'
-            database: 'test4'
-            username: 'admin'
-            password: 'admin'.
-        repository  enableSingleton ."
-
-	| repository |
-        repository := VOMemoryRepository new.
-        repository enableSingleton.
 ]
 
 { #category : #accessing }
@@ -108,8 +47,17 @@ MoM >> consistent [
 { #category : #initialize }
 MoM >> initialize [ 
 
-	self name: 'New Name Here..'.
+	self oname: 'New Name Here..'.
 	self status: MoMStatus new.
+	
+	TinyLogger reset.
+	TinyLogger default
+		addStdoutLogger;
+		addTranscriptLogger;
+		addFileLogger;
+		addFileLoggerNamed: '../logs/MoMlog.txt';
+		clearLog .
+	Time now record.
 ]
 
 { #category : #accessing }
@@ -123,13 +71,13 @@ MoM >> manager: newManager [
 ]
 
 { #category : #accessing }
-MoM >> name [
-	^ name.
+MoM >> oname [
+	^ oname
 ]
 
 { #category : #accessing }
-MoM >> name: newName [ 
-	name := newName 
+MoM >> oname: anObject [
+	oname := anObject
 ]
 
 { #category : #accessing }

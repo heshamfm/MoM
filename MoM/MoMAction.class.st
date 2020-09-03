@@ -6,7 +6,7 @@ Class {
 	#superclass : #Object,
 	#instVars : [
 		'code',
-		'name',
+		'oname',
 		'dealine',
 		'status',
 		'responsible'
@@ -22,19 +22,18 @@ MoMAction class >> isVoyageRoot [
 { #category : #initialize }
 MoMAction >> initialize [ 
 
-	name := 'Action Name Here..'.
+	oname := 'Action Name Here..'.
 	status := #NEW
 ]
 
 { #category : #accessing }
-MoMAction >> name [
-
-	^ name
+MoMAction >> oname [
+	^ oname
 ]
 
 { #category : #accessing }
-MoMAction >> name: newName [ 
-	name := newName 
+MoMAction >> oname: anObject [
+	oname := anObject
 ]
 
 { #category : #accessing }
