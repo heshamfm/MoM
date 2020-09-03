@@ -19,11 +19,6 @@ BaselineOfMoM >> baseline: spec [
 				baseline: 'TinyLogger'
 				with: [ spec repository: 'github://jecisc/TinyLogger:v1.x.x/src' ].
 				
-			spec 
-				baseline: 'Magritte' 
-				with: [ spec repository: 'github://magritte-metamodel/magritte:v3.5.4'; 
-             loads: #(Core) ].
-			
 			spec
 				package: 'MoM';
 				package: 'MoM-Tests' with: [ spec requires: #('MoM') ] ]
