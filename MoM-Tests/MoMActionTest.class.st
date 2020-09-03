@@ -12,7 +12,7 @@ MoMActionTest >> testInitialization [
 	| t |
 	t := MoMAction new.
 	self
-		assert: t name equals: 'Action Name Here..';
+		assert: t oname equals: 'Action Name Here..';
 		assert: t status equals: MoMStatus NEW;
 		assert: t status notNil .
 ]

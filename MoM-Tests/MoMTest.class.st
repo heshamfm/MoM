@@ -18,7 +18,7 @@ MoMTest >> setUp [
 
 { #category : #tests }
 MoMTest >> testInit [ 
-	self assert: ((MoM new) name) equals: 'New Name Here..'.
+	self assert: ((MoM new) oname) equals: 'New Name Here..'.
 	self assert: MoM new status notNil 
 ]
 
