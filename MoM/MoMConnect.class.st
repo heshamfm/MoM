@@ -7,9 +7,9 @@ Class {
 { #category : #'class initialization' }
 MoMConnect class >> initialize [ 
 
-	TinyLogger default 
-	    ensureFileLoggerNamed: 'D:\Progress.log'; "Add the file logger only if not already"
-	    clearLog "This will delete the previous 'Progress.log' file".
+"	TinyLogger default 
+	    ensureFileLoggerNamed: 'D:\Progress.log'; 
+	    clearLog "
 ]
 
 { #category : #'as yet unclassified' }
