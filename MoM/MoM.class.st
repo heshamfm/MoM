@@ -50,14 +50,14 @@ MoM >> initialize [
 	self oname: 'New Name Here..'.
 	self status: MoMStatus new.
 	
-	TinyLogger reset.
+"	TinyLogger reset.
 	TinyLogger default
 		addStdoutLogger;
 		addTranscriptLogger;
 		addFileLogger;
 		addFileLoggerNamed: '../logs/MoMlog.txt';
 		clearLog .
-	Time now record.
+	Time now record."
 ]
 
 { #category : #accessing }
