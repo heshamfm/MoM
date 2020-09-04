@@ -22,6 +22,11 @@ MoMStatus class >> PROGRESS [
 	^ #PROGRESS
 ]
 
+{ #category : #testing }
+MoMStatus class >> isVoyageRoot [ 
+	^ true
+]
+
 { #category : #accessing }
 MoMStatus class >> statuses [
 	^ #(NEW PROGRESS DONE)

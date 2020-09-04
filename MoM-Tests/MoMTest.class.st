@@ -13,13 +13,12 @@ Class {
 { #category : #initialization }
 MoMTest >> setUp [ 
 	testInstance := MoM new.
-	Transcript show: '===========================.'.
-	"testInstance ifNil: [ testInstance := MoM new ]."
+	testInstance ifNil: [ testInstance := MoM new ].
 ]
 
 { #category : #tests }
 MoMTest >> testInit [ 
-	self assert: ((MoM new) name) equals: 'New Name Here..'.
+	self assert: ((MoM new) oname) equals: 'New Name Here..'.
 	self assert: MoM new status notNil 
 ]
 
