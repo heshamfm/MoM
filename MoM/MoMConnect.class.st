@@ -1,6 +1,6 @@
 Class {
 	#name : #MoMConnect,
-	#superclass : #Object,
+	#superclass : #AbstractMoM,
 	#category : #MoM
 }
 

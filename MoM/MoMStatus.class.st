@@ -3,7 +3,7 @@ I represent status of Task or Goal
 "
 Class {
 	#name : #MoMStatus,
-	#superclass : #Object,
+	#superclass : #AbstractMoM,
 	#category : #MoM
 }
 

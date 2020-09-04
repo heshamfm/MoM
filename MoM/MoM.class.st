@@ -3,7 +3,7 @@ I represent a goal which is a collection of tasks. when all tasks are done, then
 "
 Class {
 	#name : #MoM,
-	#superclass : #Object,
+	#superclass : #AbstractMoM,
 	#instVars : [
 		'code',
 		'oname',

@@ -3,7 +3,7 @@ I represent a task that has an automatically generated id, a name and an optiona
 "
 Class {
 	#name : #MoMAction,
-	#superclass : #Object,
+	#superclass : #AbstractMoM,
 	#instVars : [
 		'code',
 		'oname',
