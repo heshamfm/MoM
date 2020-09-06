@@ -20,7 +20,7 @@ BaselineOfMoM >> baseline: spec [
 				with: [ spec repository: 'github://jecisc/TinyLogger:v1.x.x/src' ]."
 			spec
 			baseline: 'Seaside3'
-			with: [ spec repository: 'github://SeasideSt/Seaside:v3.4.2/repository'].
+			with: [ spec repository: 'github://SeasideSt/Seaside:v3.4.2/repository' ].
 
 			spec
 				baseline:'Voyage'

@@ -7,7 +7,7 @@ Class {
 	#category : #MoM
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 MoMStatus class >> DONE [
 	^ #DONE
 ]
@@ -17,7 +17,7 @@ MoMStatus class >> NEW [
 	^ #NEW.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 MoMStatus class >> PROGRESS [ 
 	^ #PROGRESS
 ]

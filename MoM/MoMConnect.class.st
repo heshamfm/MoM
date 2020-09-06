@@ -12,7 +12,7 @@ MoMConnect class >> initialize [
 	    clearLog "
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #data }
 MoMConnect class >> populateTestData [
 
 	MoM new
