@@ -11,10 +11,9 @@ BaselineOfMoM >> baseline: spec [
 		for: #common 
 		do: [
 			"Packages"
-			spec
+			"spec
             baseline: 'Voyage' 
-            with: [ spec repository: 'github://pharo-nosql/voyage/mc' ].
-			
+            with: [ spec repository: 'github://pharo-nosql/voyage/mc' ]."
 			"spec
 				baseline: 'TinyLogger'
 				with: [ spec repository: 'github://jecisc/TinyLogger:v1.x.x/src' ]."
